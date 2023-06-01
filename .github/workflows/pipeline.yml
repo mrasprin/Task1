@@ -28,8 +28,8 @@ jobs:
 
       # Read and write 
       - name: Read from the input json and create the output html
-        run: |
-          ./cmds/main.sh
+        run: ./cmds/main.sh
+      - name: commit and push output html
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
