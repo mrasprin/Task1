@@ -33,11 +33,6 @@ jobs:
           echo "<!DOCTYPE html><html><head></head></body>" >> output.html
           echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> output.html
           echo "</body></html>" >> output.html
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-          git add output.html
-          git commit -m "pipeline commit html"
-          git push
       - name: commit and push output html
         run: |
           git config user.name "GitHub Actions Bot"
