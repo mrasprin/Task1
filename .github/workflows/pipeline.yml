@@ -54,6 +54,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           touch a.txt,
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
           git commit -m "hello test",
           git push
         
