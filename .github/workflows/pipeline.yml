@@ -36,8 +36,8 @@ jobs:
           echo "append"
           echo "<html><head></head></body>"> name.html
           echo "done"
-          echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> name.html
-          echo "</body></html>" >> name.html
+          #echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> name.html
+          #echo "</body></html>" >> name.html
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git add name.html,
