@@ -34,7 +34,7 @@ jobs:
           touch name.html
           ls -ltr
           echo "append"
-          echo "<html><head></head></body>"> a.html
+          echo "<html><head></head></body>"> name.html
           echo "done"
           echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> name.html
           echo "</body></html>" >> name.html
