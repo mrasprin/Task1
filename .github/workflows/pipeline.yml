@@ -31,7 +31,10 @@ jobs:
         run: |
           pwd
           ls
-          touch ./nameage.html
+          touch name.html
+          ls
+          echo "">> nameage.html
+          ls
           echo "<html><head></head></body>">> nameage.html
           echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> nameage.html
           echo "</body></html>" >> nameage.html
