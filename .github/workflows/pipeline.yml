@@ -47,12 +47,13 @@ jobs:
       # Read and write 
       - name: Read from the input json and create the output html
         run: |
-          echo "<html><head></head></body>">> output.html
-          echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> output.html
-          echo "</body></html>" >> output.html
+          touch nameage.html
+          echo "<html><head></head></body>">> nameage.html
+          echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> nameage.html
+          echo "</body></html>" >> nameage.html
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          git add output.html,
+          git add nameage.html,
           git commit -m "pipeline commit html",
           git push
      
