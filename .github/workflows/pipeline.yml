@@ -47,7 +47,7 @@ jobs:
       # Read and write 
       - name: Read from the input json and create the output html
         run: |
-          touch nameage.html
+          touch ./nameage.html
           echo "<html><head></head></body>">> nameage.html
           echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> nameage.html
           echo "</body></html>" >> nameage.html
