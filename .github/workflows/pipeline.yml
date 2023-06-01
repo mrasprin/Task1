@@ -52,4 +52,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "Hello world" >> hello.html,
+          ls,
+          cat hello.html
