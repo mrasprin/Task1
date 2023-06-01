@@ -33,7 +33,8 @@ jobs:
           ls
           touch name.html
           ls
-          echo "<html><head></head></body>">> name.html
+          echo "append"
+          echo "<html><head></head></body>">> /home/runner/work/Task1/Task1/name.html
           echo "<h1>"$(jq -r .name input.json)"</h1> <h2>"$(jq -r .age input.json)"</h2>" >> name.html
           echo "</body></html>" >> name.html
           git config user.name "GitHub Actions Bot"
