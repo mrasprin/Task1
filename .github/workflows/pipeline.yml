@@ -31,7 +31,7 @@ jobs:
         run: |
           touch output.html
           echo "<!DOCTYPE html><html><head></head></body>" > output.html
-          echo "<h1>"$(jq -r ".[] | .name" input.json)"</h1> <h2>"$(jq -r ".[] | .name" input.json)"</h2>" >> output.html
+          echo "<h1>"$(jq -r ".[] | .name" input.json)"</h1> <h2>"$(jq -r ".[] | .age" input.json)"</h2>" >> output.html
           echo "</body></html>" >> output.html
       - name: commit and push output html
         run: |
