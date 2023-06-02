@@ -2,9 +2,6 @@
 for input in ./input/*.json; do	
     filename=$(basename $input '.json')
     output="./output/$filename.html"
-	  pwd
-	  touch $output
-	  ls
-	  echo "process"
+  	touch $output
 	  ./cmds/transform.sh $input $output
 done
